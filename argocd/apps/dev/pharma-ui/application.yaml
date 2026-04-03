@@ -15,10 +15,7 @@ spec:
   source:
     repoURL: https://github.com/ravdy/pharmops-gitops.git
     targetRevision: HEAD
-    path: pharma-service
-    helm:
-      valueFiles:
-        - ../envs/dev/values-pharma-ui.yaml
+    path: k8s-manifests/pharma-ui
 
   destination:
     server: https://kubernetes.default.svc
