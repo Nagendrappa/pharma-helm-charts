@@ -10,7 +10,7 @@ controller:
   metrics:
     enabled: true
     serviceMonitor:
-      enabled: true
+      enabled: false
       namespace: monitoring
 
   podAnnotations:
