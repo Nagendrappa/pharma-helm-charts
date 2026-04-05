@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: 392646748223.dkr.ecr.us-east-1.amazonaws.com/catalog-service
+  repository: <AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/catalog-service
   tag: v1.0.1
   pullPolicy: Always
 
@@ -51,7 +51,7 @@ readinessProbe:
 
 configmap:
   SPRING_PROFILES_ACTIVE: dev
-  DB_HOST: pharma-dev-postgres.cc7uaq826gld.us-east-1.rds.amazonaws.com
+  DB_HOST: <RDS_ENDPOINT>
   LOG_LEVEL: DEBUG
   SERVER_PORT: "8082"
   AUTH_SERVICE_URL: "http://auth-service:8081"
