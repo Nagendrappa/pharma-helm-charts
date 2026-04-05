@@ -1,9 +1,12 @@
 replicaCount: 1
 
 image:
-  repository: "pharma-auth-service" 
+  repository: "pharma-auth-service"
   tag: v1.0.1
   pullPolicy: Always
+
+imagePullSecrets:
+  - name: ecr-secret  # <- Add this to allow pulling from ECR
 
 service:
   type: ClusterIP
