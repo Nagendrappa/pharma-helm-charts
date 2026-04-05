@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: <AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/pharma-pharma-ui
+  repository: "pharma-auth-service"
   tag: v1.0.1
   pullPolicy: Always
 
