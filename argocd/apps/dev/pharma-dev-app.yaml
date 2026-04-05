@@ -12,9 +12,9 @@ spec:
   project: pharma
 
   source:
-    repoURL: https://github.com/ravdy/pharmops-gitops.git
+    repoURL: https://github.com/Nagendrappa/pharma-helm-charts.git 
     targetRevision: HEAD
-    path: envs/dev
+    path: . 
 
   destination:
     server: https://kubernetes.default.svc
