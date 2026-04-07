@@ -8,13 +8,17 @@ metadata:
     managed-by: terraform
   finalizers:
     - resources-finalizer.argocd.argoproj.io
+
 spec:
   project: pharma
 
   source:
-    repoURL: https://github.com/Nagendrappa/pharma-helm-charts.git 
+    repoURL: https://github.com/Nagendrappa/pharma-helm-charts.git
     targetRevision: HEAD
-    path: envs/dev 
+    path: pharma-service
+    helm:
+      valueFiles:
+        - values.yaml
 
   destination:
     server: https://kubernetes.default.svc
@@ -25,10 +29,12 @@ spec:
       prune: true
       selfHeal: true
       allowEmpty: false
+
     syncOptions:
       - CreateNamespace=true
       - PrunePropagationPolicy=foreground
       - PruneLast=true
+
     retry:
       limit: 5
       backoff:
