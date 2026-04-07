@@ -1,8 +1,8 @@
 replicaCount: 1
 
 image:
-  repository: "pharma-auth-service" 
-  tag: v1.0.1
+  repository: 392646748223.dkr.ecr.us-east-1.amazonaws.com/pharma-drug-catalog-service
+  tag: v1.0.0
   pullPolicy: Always
 
 service:
