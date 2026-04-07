@@ -15,10 +15,7 @@ spec:
   source:
     repoURL: https://github.com/Nagendrappa/pharma-helm-charts.git
     targetRevision: HEAD
-    path: pharma-service
-    helm:
-      valueFiles:
-        - envs/dev/values.yaml 
+    path: .
 
   destination:
     server: https://kubernetes.default.svc
