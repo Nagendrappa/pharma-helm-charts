@@ -15,7 +15,7 @@ spec:
   source:
     repoURL: https://github.com/Nagendrappa/pharma-helm-charts.git
     targetRevision: HEAD
-    path: .
+    path: k8s
 
   destination:
     server: https://kubernetes.default.svc
